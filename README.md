@@ -1,4 +1,4 @@
-# 🇨🇴 Colombia 5.0 – Evento de Innovación y Tecnología
+🇨🇴 Colombia 5.0 – Evento de Innovación y Tecnología
 
 Página web informativa del evento **Colombia 5.0**, enfocada en la innovación, la transformación digital y el impacto de la tecnología en la sociedad.
 
