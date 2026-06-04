@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lights &amp; Shadows — Colombia 5.0</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="conf-page.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700;900&family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- ── NAV ── -->
+  <nav class="conf-nav">
+    <a href="index.html" class="nav-back">
+      <svg viewBox="0 0 20 20" fill="none"><path d="M15 10H5M9 6l-4 4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Volver al evento</span>
+    </a>
+    <span class="nav-brand">Colombia <em>5.0</em></span>
+  </nav>
+
+  <!-- ── CONF HERO ── -->
+  <header class="conf-hero conf-hero-blue">
+    <div class="conf-hero-bg" aria-hidden="true">
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <!-- camera deco -->
+      <svg class="deco-icon circuit-tr" viewBox="0 0 200 200" fill="none">
+        <path d="M10 100 H60 V40 H120 V10" stroke="#7c3aed" stroke-width="1" stroke-dasharray="4 3" opacity="0.6"/>
+        <path d="M120 10 H160 V60 H190" stroke="#39ff14" stroke-width="1" stroke-dasharray="4 3" opacity="0.5"/>
+        <circle cx="60" cy="100" r="4" fill="#7c3aed"/>
+        <circle cx="120" cy="40" r="4" fill="#39ff14"/>
+        <circle cx="160" cy="60" r="4" fill="#1e40af"/>
+      </svg>
+    </div>
+    <div class="conf-hero-content reveal-up delay-0">
+      <div class="conf-tag conf-tag-blue">
+        <span>🎨</span><span>Diseño Visual</span>
+      </div>
+      <h1 class="conf-hero-title conf-hero-title-blue">Lights &amp; Shadows</h1>
+      <p class="conf-hero-sub">Color, luz, sombra y composición de cámara</p>
+      <div class="conf-meta-row">
+        <div class="meta-pill">
+          <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M10 6v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Por confirmar
+        </div>
+        <div class="meta-pill">
+          <svg viewBox="0 0 20 20" fill="none"><path d="M10 2C6.686 2 4 4.686 4 8c0 5 6 10 6 10s6-5 6-10c0-3.314-2.686-6-6-6z" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="8" r="2" stroke="currentColor" stroke-width="1.5"/></svg>
+          Pabellón 5
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── SPEAKER ── -->
+  <section class="conf-section">
+    <div class="conf-container">
+      <div class="speaker-block reveal-up delay-1">
+        <div class="speaker-avatar-lg">
+          
+          <img src="img/ian maggiben.jpg" alt="Ian Meggiben" /> 
+          <div class="avatar-glow avatar-glow-blue"></div>
+        </div>
+        <div class="speaker-details">
+          <p class="speaker-label">Conferencista</p>
+          <h2 class="speaker-name-lg speaker-name-blue">Ian Meggiben</h2>
+          <p class="speaker-role-lg">Visual Director &amp; Artist</p>
+          <p class="speaker-bio">
+            Director de arte y narrador visual con experiencia en cine, publicidad y medios digitales. Ian ha desarrollado su lenguaje visual trabajando con marcas internacionales y proyectos creativos independientes, siendo reconocido por su capacidad de transmitir emociones profundas a través del uso preciso de la luz, el color y la composición.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── DESCRIPTION ── -->
+  <section class="conf-section conf-section-dark">
+    <div class="conf-container">
+      <div class="two-col reveal-up delay-0">
+        <div>
+          <p class="section-label">Sobre la charla</p>
+          <h2 class="section-title-sm">El lenguaje invisible de la imagen</h2>
+          <p class="body-text">
+            Ian Meggiben desglosa el lenguaje visual que hace que una imagen hable sin palabras. Aprende cómo el uso estratégico del color genera emociones, cómo las luces y sombras construyen profundidad narrativa, y cómo los planos y ángulos de cámara dirigen la mirada del espectador.
+          </p>
+          <p class="body-text">
+            Una masterclass imprescindible para diseñadores, cineastas y creadores de contenido que quieren llevar su trabajo visual al siguiente nivel, entendiendo los principios que diferencian una imagen funcional de una imagen que perdura en la memoria.
+          </p>
+        </div>
+        <div class="key-points">
+          <p class="section-label">Temas clave</p>
+          <ul class="points-list">
+            <li><span class="point-icon">🎨</span> Teoría del color y emociones</li>
+            <li><span class="point-icon">💡</span> Iluminación narrativa</li>
+            <li><span class="point-icon">🌑</span> Uso de sombras y contraste</li>
+            <li><span class="point-icon">📷</span> Planos y composición de cámara</li>
+            <li><span class="point-icon">👁️</span> Dirección visual de la mirada</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GALLERY ── -->
+  <section class="conf-section">
+    <div class="conf-container">
+      <p class="section-label reveal-up delay-0">Galería</p>
+      <h2 class="section-title-sm reveal-up delay-1">Momentos del evento</h2>
+
+      <div class="photo-grid reveal-up delay-2">
+        <div class="photo-slot photo-slot-wide">
+          <div class="photo-slot">
+               <img src="img/foto principal I.jpg" alt="Descripción" />
+             </div>
+          <div class="photo-placeholder photo-placeholder-blue">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="4" stroke="#1e90ff" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="18" cy="22" r="4" stroke="#7c3aed" stroke-width="1.5"/><path d="M6 34l9-9 6 6 6-8 15 11" stroke="#1e40af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Foto principal</span>
+            <code>src="fotos/foto-principal.jpg"</code>
+          </div>
+        </div>
+
+        <div class="photo-slot">
+          <div class="photo-slot">
+               <img src="img/foto 2 I.jpeg" alt="Descripción" />
+             </div>
+          <div class="photo-placeholder photo-placeholder-blue">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="4" stroke="#1e90ff" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="18" cy="22" r="4" stroke="#7c3aed" stroke-width="1.5"/><path d="M6 34l9-9 6 6 6-8 15 11" stroke="#1e40af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Foto 2</span>
+          </div>
+        </div>
+
+        <div class="photo-slot">
+          <div class="photo-slot">
+               <img src="img/foto 3 I.jpeg" alt="Descripción" />
+             </div>
+          <div class="photo-placeholder photo-placeholder-blue">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="4" stroke="#1e90ff" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="18" cy="22" r="4" stroke="#7c3aed" stroke-width="1.5"/><path d="M6 34l9-9 6 6 6-8 15 11" stroke="#1e40af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Foto 3</span>
+          </div>
+        </div>
+
+        <div class="photo-slot">
+          <div class="photo-slot">
+               <img src="img/foto 4 i.jpeg" alt="Descripción" />
+             </div>
+          <div class="photo-placeholder photo-placeholder-blue">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="4" stroke="#1e90ff" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="18" cy="22" r="4" stroke="#7c3aed" stroke-width="1.5"/><path d="M6 34l9-9 6 6 6-8 15 11" stroke="#1e40af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Foto 4</span>
+          </div>
+        </div>
+
+        <div class="photo-slot">
+          <div class="photo-slot">
+               <img src="img/foto 5 i.jpeg" alt="Descripción" />
+             </div>
+          <div class="photo-placeholder photo-placeholder-blue">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="4" stroke="#1e90ff" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="18" cy="22" r="4" stroke="#7c3aed" stroke-width="1.5"/><path d="M6 34l9-9 6 6 6-8 15 11" stroke="#1e40af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Foto 5</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+  </section>
+<!-- ── MI OPINIÓN ── -->
+<section class="conf-section">
+  <div class="conf-container">
+    <p class="section-label reveal-up delay-0">Mi experiencia</p>
+    <h2 class="section-title-sm reveal-up delay-1">Mi opinión</h2>
+
+    <div class="opinion-tabs reveal-up delay-2">
+      <div class="opinion-nav">
+        <button class="opinion-tab active" data-opinion="resumen">Resumen</button>
+        <button class="opinion-tab" data-opinion="aprendizaje">Lo que aprendí</button>
+        <button class="opinion-tab" data-opinion="recomendacion">¿La recomiendo?</button>
+      </div>
+
+      <div class="opinion-body">
+        <div class="opinion-panel active" data-panel="resumen">
+          <p>En esta conferencia aprendí la importancia del uso de la luz y las sombras como elementos narrativos, más allá de lo estético. Ian explicó cómo los colores, la iluminación y los contrastes influyen directamente en la percepción del espectador y en la forma en que se comunica una idea o emoción.
+</p>
+        </div>
+        <div class="opinion-panel" data-panel="aprendizaje">
+          <p>Uno de los aprendizajes más valiosos fue entender que la luz no solo ilumina, sino que cuenta historias, define atmósferas y aporta intención a cada escena. Estos principios pueden aplicarse tanto en fotografía, video, diseño visual y proyectos creativos en general.</p>
+        </div>
+        <div class="opinion-panel" data-panel="recomendacion">
+          <p>Sí, completamente. Es una conferencia muy inspiradora y práctica, ideal para personas interesadas en el diseño, la producción audiovisual, la fotografía o cualquier área donde la comunicación visual sea importante.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">Colombia <em>5.0</em></span>
+        <p>Acceso · Soberanía · Productividad</p>
+      </div>
+      <div class="footer-copy">
+        <span>© 2025 Colombia 5.0 — Todos los derechos reservados a Darikson Cortes Developer Junior</span>
+      </div>
+    </div>
+    <div class="footer-glow"></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

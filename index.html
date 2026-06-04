@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colombia 5.0 — Innovación, Juego y Tecnología</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700;900&family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ───────────── CURSOR ───────────── -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- ───────────── HERO ───────────── -->
+  <section class="hero" id="hero">
+
+    <!-- Background decorative SVG layer -->
+    <div class="bg-decor" aria-hidden="true">
+      <!-- Grid lines -->
+      <svg class="grid-svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="gridGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.25"/>
+            <stop offset="100%" stop-color="#0d0d1a" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <!-- Horizontal lines -->
+        <g stroke="url(#gridGrad)" stroke-width="0.5">
+          <line x1="0" y1="150" x2="1440" y2="150"/>
+          <line x1="0" y1="300" x2="1440" y2="300"/>
+          <line x1="0" y1="450" x2="1440" y2="450"/>
+          <line x1="0" y1="600" x2="1440" y2="600"/>
+          <line x1="0" y1="750" x2="1440" y2="750"/>
+        </g>
+        <!-- Vertical lines -->
+        <g stroke="url(#gridGrad)" stroke-width="0.5">
+          <line x1="180" y1="0" x2="180" y2="900"/>
+          <line x1="360" y1="0" x2="360" y2="900"/>
+          <line x1="540" y1="0" x2="540" y2="900"/>
+          <line x1="720" y1="0" x2="720" y2="900"/>
+          <line x1="900" y1="0" x2="900" y2="900"/>
+          <line x1="1080" y1="0" x2="1080" y2="900"/>
+          <line x1="1260" y1="0" x2="1260" y2="900"/>
+        </g>
+      </svg>
+
+      <!-- Floating robot icon left -->
+      <svg class="deco-icon robot-left" viewBox="0 0 120 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="30" y="45" width="60" height="55" rx="8" fill="none" stroke="#39ff14" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <rect x="42" y="60" width="12" height="8" rx="2" fill="#39ff14" opacity="0.7"/>
+        <rect x="66" y="60" width="12" height="8" rx="2" fill="#39ff14" opacity="0.7"/>
+        <line x1="60" y1="45" x2="60" y2="30" stroke="#39ff14" stroke-width="1.5"/>
+        <circle cx="60" cy="25" r="7" fill="none" stroke="#39ff14" stroke-width="1.5"/>
+        <rect x="20" y="58" width="10" height="28" rx="5" fill="none" stroke="#7c3aed" stroke-width="1.5"/>
+        <rect x="90" y="58" width="10" height="28" rx="5" fill="none" stroke="#7c3aed" stroke-width="1.5"/>
+        <rect x="38" y="100" width="10" height="30" rx="5" fill="none" stroke="#1e40af" stroke-width="1.5"/>
+        <rect x="72" y="100" width="10" height="30" rx="5" fill="none" stroke="#1e40af" stroke-width="1.5"/>
+        <line x1="47" y1="82" x2="73" y2="82" stroke="#39ff14" stroke-width="1" opacity="0.5"/>
+        <text x="50" y="90" font-size="9" fill="#39ff14" opacity="0.5" font-family="monospace">5.0</text>
+      </svg>
+
+      <!-- Floating gamepad right -->
+      <svg class="deco-icon gamepad-right" viewBox="0 0 160 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="20" y="30" width="120" height="55" rx="27" fill="none" stroke="#1e40af" stroke-width="1.5" stroke-dasharray="5 3"/>
+        <line x1="52" y1="52" x2="52" y2="62" stroke="#39ff14" stroke-width="2"/>
+        <line x1="47" y1="57" x2="57" y2="57" stroke="#39ff14" stroke-width="2"/>
+        <circle cx="108" cy="50" r="4" fill="none" stroke="#7c3aed" stroke-width="1.5"/>
+        <circle cx="120" cy="57" r="4" fill="none" stroke="#7c3aed" stroke-width="1.5"/>
+        <circle cx="108" cy="64" r="4" fill="none" stroke="#7c3aed" stroke-width="1.5"/>
+        <circle cx="96" cy="57" r="4" fill="none" stroke="#7c3aed" stroke-width="1.5"/>
+        <rect x="70" y="38" width="8" height="4" rx="2" fill="#39ff14" opacity="0.6"/>
+        <rect x="82" y="38" width="8" height="4" rx="2" fill="#39ff14" opacity="0.6"/>
+        <ellipse cx="40" cy="73" rx="14" ry="6" fill="none" stroke="#1e40af" stroke-width="1" stroke-dasharray="3 2"/>
+        <ellipse cx="120" cy="73" rx="14" ry="6" fill="none" stroke="#1e40af" stroke-width="1" stroke-dasharray="3 2"/>
+      </svg>
+
+      <!-- Floating circuit top right -->
+      <svg class="deco-icon circuit-tr" viewBox="0 0 200 200" fill="none">
+        <path d="M10 100 H60 V40 H120 V10" stroke="#7c3aed" stroke-width="1" stroke-dasharray="4 3" opacity="0.6"/>
+        <path d="M120 10 H160 V60 H190" stroke="#39ff14" stroke-width="1" stroke-dasharray="4 3" opacity="0.5"/>
+        <circle cx="60" cy="100" r="4" fill="#7c3aed"/>
+        <circle cx="120" cy="40" r="4" fill="#39ff14"/>
+        <circle cx="160" cy="60" r="4" fill="#1e40af"/>
+        <rect x="110" y="0" width="20" height="20" rx="3" fill="none" stroke="#39ff14" stroke-width="1" opacity="0.5"/>
+        <path d="M10 140 H40 V190" stroke="#1e40af" stroke-width="1" stroke-dasharray="4 3" opacity="0.4"/>
+        <circle cx="40" cy="140" r="3" fill="#1e40af" opacity="0.5"/>
+      </svg>
+
+      <!-- Floating binary text -->
+      <div class="binary-bg" aria-hidden="true">
+        <span>01001001 01001110 01001110 01001111</span>
+        <span>10110101 00110101 11001010 00101011</span>
+        <span>01000011 01001111 01001100 01001111</span>
+        <span>11010101 00101010 11001011 00010101</span>
+      </div>
+
+      <!-- Orbs -->
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Hero content -->
+    <div class="hero-content">
+      <div class="hero-badge reveal-up delay-0">
+        <span class="badge-dot"></span>
+        <span>Evento Tecnológico · 2026</span>
+      </div>
+
+      <h1 class="hero-title reveal-up delay-1">
+        <span class="title-colombia">Colombia</span>
+        <span class="title-version">5.0</span>
+      </h1>
+
+      <p class="hero-tagline reveal-up delay-2">Acceso, soberanía y productividad</p>
+
+      <p class="hero-desc reveal-up delay-3">
+        El encuentro donde innovación, videojuegos y tecnología se fusionan para redefinir el futuro digital de Colombia. Conferencias de élite, experiencias inmersivas y conexiones que trascienden.
+      </p>
+
+      <div class="hero-meta reveal-up delay-4">
+        <div class="meta-pill">
+          <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M10 6v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          10:00 a.m. — 11:00 a.m.
+        </div>
+        <div class="meta-pill">
+          <svg viewBox="0 0 20 20" fill="none"><path d="M10 2C6.686 2 4 4.686 4 8c0 5 6 10 6 10s6-5 6-10c0-3.314-2.686-6-6-6z" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="8" r="2" stroke="currentColor" stroke-width="1.5"/></svg>
+          Pabellón 5
+        </div>
+      </div>
+
+      <div class="hero-actions reveal-up delay-5">
+        <button class="btn-primary" id="btnVerConferencias">
+          <span>Ver Conferencias</span>
+          <svg viewBox="0 0 20 20" fill="none"><path d="M5 10h10M11 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="btn-ghost">
+          <span>Más info</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator reveal-fade delay-5">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ───────────── STATS BAR ───────────── -->
+  <section class="stats-bar" id="statsBar">
+    <div class="stats-inner">
+      <div class="stat reveal-up delay-0">
+        <span class="stat-num">2</span>
+        <span class="stat-label">Conferencias</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat reveal-up delay-1">
+        <span class="stat-num">1</span>
+        <span class="stat-label">Pabellón</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat reveal-up delay-2">
+        <span class="stat-num">2</span>
+        <span class="stat-label">Conferencistas</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat reveal-up delay-3">
+        <span class="stat-num">∞</span>
+        <span class="stat-label">Posibilidades</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── CONFERENCES ───────────── -->
+  <section class="conferences" id="conferences">
+    <div class="section-header reveal-up delay-0">
+      <p class="section-label">PROGRAMA</p>
+      <h2 class="section-title">Conferencias</h2>
+      <p class="section-subtitle">Experiencias diseñadas para expandir tu visión tecnológica</p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs-wrapper reveal-up delay-1">
+      <div class="tabs-nav" role="tablist">
+        <button class="tab-btn active" data-tab="0" role="tab" aria-selected="true">
+          <span class="tab-num">01</span>
+          <span class="tab-name">Keep Playing</span>
+        </button>
+        <button class="tab-btn" data-tab="1" role="tab" aria-selected="false">
+          <span class="tab-num">02</span>
+          <span class="tab-name">Lights &amp; Shadows</span>
+        </button>
+      </div>
+
+      <!-- Tab panels -->
+      <div class="tabs-content">
+        <!-- ── TAB 0 ── -->
+        <div class="tab-panel active" data-panel="0" role="tabpanel">
+          <div class="panel-grid">
+            <div class="panel-visual">
+              <div class="speaker-card">
+                <div class="speaker-avatar">
+                  <svg viewBox="0 0 100 100" fill="none">
+                    <circle cx="50" cy="35" r="22" stroke="#39ff14" stroke-width="1.5" stroke-dasharray="5 3"/>
+                    <path d="M15 85c0-19.33 15.67-35 35-35s35 15.67 35 35" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4 3"/>
+                    <circle cx="50" cy="35" r="14" fill="#0d0d2b" stroke="#39ff14" stroke-width="1"/>
+                    <text x="50" y="40" text-anchor="middle" font-size="14" fill="#39ff14" font-family="Orbitron">HH</text>
+                  </svg>
+                </div>
+                <div class="speaker-info">
+                  <span class="speaker-name">Hernán Hildebrant (chileno)</span>
+                  <span class="speaker-role">Arquitecto de estrategias corporativas y cambios sostenibles | Gamification | IA &amp; Speaker</span>
+                </div>
+              </div>
+
+              <!-- Gamepad decoration -->
+              <div class="conf-visual-deco">
+                <svg viewBox="0 0 200 140" fill="none" class="big-gamepad">
+                  <rect x="15" y="30" width="170" height="80" rx="40" fill="#0d0d2b" stroke="#7c3aed" stroke-width="1.5"/>
+                  <rect x="15" y="30" width="170" height="80" rx="40" fill="none" stroke="#39ff14" stroke-width="0.5" stroke-dasharray="6 4" opacity="0.4"/>
+                  <!-- D-pad -->
+                  <line x1="55" y1="58" x2="55" y2="82" stroke="#39ff14" stroke-width="2.5" stroke-linecap="round"/>
+                  <line x1="43" y1="70" x2="67" y2="70" stroke="#39ff14" stroke-width="2.5" stroke-linecap="round"/>
+                  <!-- Buttons -->
+                  <circle cx="145" cy="58" r="7" fill="none" stroke="#7c3aed" stroke-width="1.5"/>
+                  <circle cx="160" cy="70" r="7" fill="none" stroke="#39ff14" stroke-width="1.5"/>
+                  <circle cx="145" cy="82" r="7" fill="none" stroke="#1e40af" stroke-width="1.5"/>
+                  <circle cx="130" cy="70" r="7" fill="none" stroke="#ec4899" stroke-width="1.5"/>
+                  <text x="145" y="62" text-anchor="middle" font-size="8" fill="#7c3aed">▲</text>
+                  <text x="160" y="74" text-anchor="middle" font-size="8" fill="#39ff14">◆</text>
+                  <text x="145" y="86" text-anchor="middle" font-size="8" fill="#1e40af">✕</text>
+                  <text x="130" y="74" text-anchor="middle" font-size="8" fill="#ec4899">●</text>
+                  <!-- Analog sticks -->
+                  <circle cx="85" cy="90" r="10" fill="#111130" stroke="#7c3aed" stroke-width="1"/>
+                  <circle cx="115" cy="90" r="10" fill="#111130" stroke="#7c3aed" stroke-width="1"/>
+                  <circle cx="85" cy="90" r="4" fill="#7c3aed" opacity="0.5"/>
+                  <circle cx="115" cy="90" r="4" fill="#7c3aed" opacity="0.5"/>
+                  <!-- Start / select -->
+                  <rect x="88" y="38" width="11" height="5" rx="2.5" fill="#1e40af" opacity="0.7"/>
+                  <rect x="101" y="38" width="11" height="5" rx="2.5" fill="#39ff14" opacity="0.7"/>
+                </svg>
+              </div>
+            </div>
+
+            <div class="panel-text">
+              <div class="conf-tag">
+                <span class="tag-icon">🎮</span>
+                <span>Gamificación</span>
+              </div>
+              <h3 class="conf-title">Keep Playing</h3>
+              <p class="conf-theme">Gamificación aplicada a la vida diaria</p>
+              <p class="conf-desc">
+                ¿Y si cada reto del día a día fuera un nivel que superar? Hernán Hildebrant nos lleva a explorar cómo los principios del diseño de videojuegos —recompensas, progresión, retroalimentación y retos— pueden transformar hábitos, productividad y motivación en contextos reales. Una charla que redefine la manera en que aprendemos, trabajamos y vivimos.
+              </p>
+              <div class="conf-details">
+                <div class="detail-item">
+                  <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M10 6v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                  <span>10:00 a.m. — 11:00 a.m.</span>
+                </div>
+                <div class="detail-item">
+                  <svg viewBox="0 0 20 20" fill="none"><path d="M10 2C6.686 2 4 4.686 4 8c0 5 6 10 6 10s6-5 6-10c0-3.314-2.686-6-6-6z" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="8" r="2" stroke="currentColor" stroke-width="1.5"/></svg>
+                  <span>Pabellón 5</span>
+                </div>
+              </div>
+              <a href="keep-playing.html" class="btn-conf">
+                <span>Echar un vistazo</span>
+                <svg viewBox="0 0 20 20" fill="none"><path d="M5 10h10M11 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── TAB 1 ── -->
+        <div class="tab-panel" data-panel="1" role="tabpanel">
+          <div class="panel-grid">
+            <div class="panel-visual">
+              <div class="speaker-card">
+                <div class="speaker-avatar">
+                  <svg viewBox="0 0 100 100" fill="none">
+                    <circle cx="50" cy="35" r="22" stroke="#1e40af" stroke-width="1.5" stroke-dasharray="5 3"/>
+                    <path d="M15 85c0-19.33 15.67-35 35-35s35 15.67 35 35" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4 3"/>
+                    <circle cx="50" cy="35" r="14" fill="#0d0d2b" stroke="#1e40af" stroke-width="1"/>
+                    <text x="50" y="40" text-anchor="middle" font-size="14" fill="#1e90ff" font-family="Orbitron">IM</text>
+                  </svg>
+                </div>
+                <div class="speaker-info">
+                  <span class="speaker-name">Ian Meggiben</span>
+                  <span class="speaker-role">Pixar Animation Studios - Director of Photography, Lighting Visual Director &amp; Artist</span>
+                </div>
+              </div>
+
+              <!-- Camera / light decoration -->
+              <div class="conf-visual-deco">
+                <svg viewBox="0 0 200 140" fill="none" class="big-camera">
+                  <!-- Body -->
+                  <rect x="40" y="40" width="120" height="75" rx="8" fill="#0d0d2b" stroke="#1e40af" stroke-width="1.5"/>
+                  <!-- Lens -->
+                  <circle cx="100" cy="78" r="30" fill="#060615" stroke="#7c3aed" stroke-width="1.5"/>
+                  <circle cx="100" cy="78" r="22" fill="#060615" stroke="#1e40af" stroke-width="1"/>
+                  <circle cx="100" cy="78" r="14" fill="#060615" stroke="#7c3aed" stroke-width="1"/>
+                  <circle cx="100" cy="78" r="6" fill="#7c3aed" opacity="0.6"/>
+                  <!-- Highlight in lens -->
+                  <circle cx="93" cy="71" r="3" fill="white" opacity="0.15"/>
+                  <!-- Top mount -->
+                  <rect x="75" y="28" width="50" height="14" rx="4" fill="#0d0d2b" stroke="#1e40af" stroke-width="1"/>
+                  <rect x="85" y="32" width="10" height="6" rx="2" fill="#39ff14" opacity="0.5"/>
+                  <!-- Light rays -->
+                  <line x1="100" y1="10" x2="100" y2="28" stroke="#39ff14" stroke-width="1" stroke-dasharray="3 2" opacity="0.5"/>
+                  <line x1="140" y1="25" x2="125" y2="40" stroke="#7c3aed" stroke-width="1" stroke-dasharray="3 2" opacity="0.4"/>
+                  <line x1="60" y1="25" x2="75" y2="40" stroke="#1e40af" stroke-width="1" stroke-dasharray="3 2" opacity="0.4"/>
+                  <!-- Shadow triangle on side -->
+                  <polygon points="162,50 175,78 162,106" fill="none" stroke="#39ff14" stroke-width="1" stroke-dasharray="3 2" opacity="0.3"/>
+                </svg>
+              </div>
+            </div>
+
+            <div class="panel-text">
+              <div class="conf-tag conf-tag-blue">
+                <span class="tag-icon">🎨</span>
+                <span>Diseño Visual</span>
+              </div>
+              <h3 class="conf-title conf-title-blue">Lights &amp; Shadows</h3>
+              <p class="conf-theme">Color, luz, sombra y composición de cámara</p>
+              <p class="conf-desc">
+                Ian Meggiben desglosa el lenguaje visual que hace que una imagen hable sin palabras. Aprende cómo el uso estratégico del color genera emociones, cómo las luces y sombras construyen profundidad narrativa, y cómo los planos y ángulos de cámara dirigen la mirada del espectador. Una masterclass imprescindible para diseñadores, cineastas y creadores de contenido.
+              </p>
+              <div class="conf-details">
+                <div class="detail-item">
+                  <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M10 6v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                  <span>11:00 am - 12:00 am</span>
+                </div>
+                <div class="detail-item">
+                  <svg viewBox="0 0 20 20" fill="none"><path d="M10 2C6.686 2 4 4.686 4 8c0 5 6 10 6 10s6-5 6-10c0-3.314-2.686-6-6-6z" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="8" r="2" stroke="currentColor" stroke-width="1.5"/></svg>
+                  <span>Pabellón 3</span>
+                </div>
+              </div>
+              <a href="lights-shadows.html" class="btn-conf btn-conf-blue">
+                <span>Echar un vistazo</span>
+                <svg viewBox="0 0 20 20" fill="none"><path d="M5 10h10M11 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── FOOTER ───────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">Colombia <em>5.0</em></span>
+        <p>Acceso · Soberanía · Productividad</p>
+      </div>
+      <div class="footer-copy">
+        <span>© 2025 Colombia 5.0 — Todos los derechos reservados a Darikson Cortes Developer Junior</span>
+      </div>
+    </div>
+    <div class="footer-glow"></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

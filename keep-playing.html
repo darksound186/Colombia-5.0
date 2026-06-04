@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keep Playing — Colombia 5.0</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="conf-page.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700;900&family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- ── NAV ── -->
+  <nav class="conf-nav">
+    <a href="index.html" class="nav-back">
+      <svg viewBox="0 0 20 20" fill="none"><path d="M15 10H5M9 6l-4 4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Volver pagina principal</span>
+    </a>
+    <span class="nav-brand">Colombia <em>5.0</em></span>
+  </nav>
+
+  <!-- ── CONF HERO ── -->
+  <header class="conf-hero conf-hero-green">
+    <div class="conf-hero-bg" aria-hidden="true">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <!-- floating gamepad bg -->
+      <svg class="deco-icon gamepad-right" viewBox="0 0 160 110" fill="none">
+        <rect x="20" y="30" width="120" height="55" rx="27" fill="none" stroke="#1e40af" stroke-width="1.5" stroke-dasharray="5 3"/>
+        <line x1="52" y1="52" x2="52" y2="62" stroke="#39ff14" stroke-width="2"/>
+        <line x1="47" y1="57" x2="57" y2="57" stroke="#39ff14" stroke-width="2"/>
+        <circle cx="108" cy="50" r="4" fill="none" stroke="#7c3aed" stroke-width="1.5"/>
+        <circle cx="120" cy="57" r="4" fill="none" stroke="#7c3aed" stroke-width="1.5"/>
+        <circle cx="108" cy="64" r="4" fill="none" stroke="#7c3aed" stroke-width="1.5"/>
+        <circle cx="96" cy="57" r="4" fill="none" stroke="#7c3aed" stroke-width="1.5"/>
+      </svg>
+    </div>
+    <div class="conf-hero-content reveal-up delay-0">
+      <div class="conf-tag">
+        <span>🎮</span><span>Gamificación</span>
+      </div>
+      <h1 class="conf-hero-title">Keep Playing</h1>
+      <p class="conf-hero-sub">Gamificación aplicada a la vida diaria</p>
+      <div class="conf-meta-row">
+        <div class="meta-pill">
+          <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M10 6v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          10:00 a.m. — 11:00 a.m.
+        </div>
+        <div class="meta-pill">
+          <svg viewBox="0 0 20 20" fill="none"><path d="M10 2C6.686 2 4 4.686 4 8c0 5 6 10 6 10s6-5 6-10c0-3.314-2.686-6-6-6z" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="8" r="2" stroke="currentColor" stroke-width="1.5"/></svg>
+          Pabellón 5
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── SPEAKER ── -->
+  <section class="conf-section">
+    <div class="conf-container">
+      <div class="speaker-block reveal-up delay-1">
+        <div class="speaker-avatar-lg">
+          <img src="img/IMG.jpg" alt="Hernán Hildebrant" />
+          <div class="avatar-glow avatar-glow-green"></div>
+        </div>
+        <div class="speaker-details">
+          <p class="speaker-label">conferencista</p>
+          <h2 class="speaker-name-lg">Hernán Hildebrant</h2>
+          <p class="speaker-role-lg">Game Designer &amp; Speaker</p>
+          <p class="speaker-bio">
+            Diseñador de experiencias y especialista en mecánicas de juego con más de una década explorando cómo los videojuegos pueden transformar la educación, la productividad y el desarrollo personal. Su enfoque combina psicología del comportamiento con diseño centrado en el jugador.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── DESCRIPTION ── -->
+  <section class="conf-section conf-section-dark">
+    <div class="conf-container">
+      <div class="two-col reveal-up delay-0">
+        <div>
+          <p class="section-label">Sobre la charla</p>
+          <h2 class="section-title-sm">¿Y si la vida fuera un videojuego?</h2>
+          <p class="body-text">
+            ¿Y si cada reto del día a día fuera un nivel que superar? Hernán Hildebrant nos lleva a explorar cómo los principios del diseño de videojuegos —recompensas, progresión, retroalimentación y retos— pueden transformar hábitos, productividad y motivación en contextos reales.
+          </p>
+          <p class="body-text">
+            Desde sistemas de puntuación aplicados al aprendizaje hasta narrativas de misiones en el trabajo en equipo, esta conferencia demuestra que la gamificación no es solo una tendencia: es una metodología con respaldo científico que cambia comportamientos.
+          </p>
+        </div>
+        <div class="key-points">
+          <p class="section-label">Temas clave</p>
+          <ul class="points-list">
+            <li><span class="point-icon">🎯</span> Sistemas de recompensa y progresión</li>
+            <li><span class="point-icon">🧠</span> Psicología del jugador</li>
+            <li><span class="point-icon">🔄</span> Retroalimentación en tiempo real</li>
+            <li><span class="point-icon">🏆</span> Diseño de retos y logros</li>
+            <li><span class="point-icon">🤝</span> Gamificación en equipos de trabajo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GALLERY ── -->
+  <section class="conf-section">
+    <div class="conf-container">
+      <p class="section-label reveal-up delay-0">Galería</p>
+      <h2 class="section-title-sm reveal-up delay-1">Momentos del evento</h2>
+
+      <div class="photo-grid reveal-up delay-2">
+        <div class="photo-slot photo-slot-wide">
+             <div class="photo-slot">
+               <img src="img/Foto principal H.jpeg" alt="Descripción" />
+             </div>
+          <div class="photo-placeholder">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="4" stroke="#39ff14" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="18" cy="22" r="4" stroke="#7c3aed" stroke-width="1.5"/><path d="M6 34l9-9 6 6 6-8 15 11" stroke="#1e40af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Foto principal</span>
+            <code>src="fotos/foto-principal.jpg"</code>
+          </div>
+        </div>
+
+        <div class="photo-slot">
+          <div class="photo-placeholder">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="4" stroke="#39ff14" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="18" cy="22" r="4" stroke="#7c3aed" stroke-width="1.5"/><path d="M6 34l9-9 6 6 6-8 15 11" stroke="#1e40af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <img src="img/Foto 2 H.jpg" alt="Descripción" />
+          </div>
+        </div>
+
+        <div class="photo-slot">
+          <div class="photo-placeholder">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="4" stroke="#39ff14" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="18" cy="22" r="4" stroke="#7c3aed" stroke-width="1.5"/><path d="M6 34l9-9 6 6 6-8 15 11" stroke="#1e40af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <img src="img/foto 3 H.jpg" alt="Descripción" />
+          </div>
+        </div>
+
+        <div class="photo-slot">
+          <div class="photo-placeholder">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="4" stroke="#39ff14" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="18" cy="22" r="4" stroke="#7c3aed" stroke-width="1.5"/><path d="M6 34l9-9 6 6 6-8 15 11" stroke="#1e40af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <img src="img/foto 4 h.jpg" alt="Descripción" />
+          </div>
+        </div>
+
+        <div class="photo-slot">
+          <div class="photo-placeholder">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="4" stroke="#39ff14" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="18" cy="22" r="4" stroke="#7c3aed" stroke-width="1.5"/><path d="M6 34l9-9 6 6 6-8 15 11" stroke="#1e40af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <img src="img/Foto 5 h.jpg" alt="Descripción" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+<!-- ── MI OPINIÓN ── -->
+<section class="conf-section">
+  <div class="conf-container">
+    <p class="section-label reveal-up delay-0">Mi experiencia</p>
+    <h2 class="section-title-sm reveal-up delay-1">Mi opinión</h2>
+
+    <div class="opinion-tabs reveal-up delay-2">
+      <div class="opinion-nav">
+        <button class="opinion-tab active" data-opinion="resumen">Resumen</button>
+        <button class="opinion-tab" data-opinion="aprendizaje">Lo que aprendí</button>
+        <button class="opinion-tab" data-opinion="recomendacion">¿La recomiendo?</button>
+      </div>
+
+      <div class="opinion-body">
+        <div class="opinion-panel active" data-panel="resumen">
+          <p>En esta conferencia aprendí cómo la gamificación puede aplicarse a la vida diaria, no solo en videojuegos, sino también en el estudio, el trabajo y el crecimiento personal.
+Se explicó cómo elementos como los retos, las metas, las recompensas y el progreso visible pueden ayudarnos a mantener la motivación y mejorar la productividad en tareas cotidianas.</p>
+        </div>
+        <div class="opinion-panel" data-panel="aprendizaje">
+          <p>Uno de los aprendizajes más importantes fue entender que convertir actividades normales en experiencias tipo juego hace que sean más llevaderas y atractivas, ayudando a crear hábitos positivos y a mantener la constancia. Además, se mostraron ejemplos claros de cómo la gamificación ya se usa en aplicaciones, empresas y procesos de aprendizaje.</p>
+        </div>
+        <div class="opinion-panel" data-panel="recomendacion">
+          <p>Sí, totalmente.Fue Una conferencia muy clara, dinámica y fácil de entender, ideal para cualquier persona interesada en mejorar su rendimiento personal o profesional utilizando enfoques creativos e innovadores.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">Colombia <em>5.0</em></span>
+        <p>Acceso · Soberanía · Productividad</p>
+      </div>
+      <div class="footer-copy">
+        <span>© 2025 Colombia 5.0 — Todos los derechos reservados a Darikson Cortes Developer Junior</span>
+      </div>
+    </div>
+    <div class="footer-glow"></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
