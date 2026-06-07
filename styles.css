@@ -776,3 +776,28 @@ body:hover .cursor { opacity: 1; }
   .tab-name { font-size: 12px; }
   .conf-details { flex-direction: column; gap: 10px; }
 }
+/* ── Footer Nav ── */
+.footer-nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 16px 0;
+}
+.footer-nav a {
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  transition: color 0.25s, border-color 0.25s, background 0.25s;
+}
+.footer-nav a:hover {
+  color: var(--neon);
+  border-color: rgba(57,255,20,0.4);
+  background: rgba(57,255,20,0.05);
+}

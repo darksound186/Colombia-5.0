@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glossary — Colombia 5.0</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="conf-page.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700;900&family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Glossary specific ── */
+    .glossary-hero {
+      padding: 140px 24px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, #0a1f4e 0%, var(--bg) 70%);
+    }
+    .glossary-hero .orb { position: absolute; border-radius: 50%; filter: blur(80px); pointer-events: none; }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      max-width: 480px;
+      margin: 32px auto 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 20px;
+      transition: border-color 0.25s;
+    }
+    .search-bar:focus-within { border-color: var(--purple); }
+    .search-bar svg { width: 18px; height: 18px; color: var(--text-dim); flex-shrink: 0; }
+    .search-bar input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--text);
+      font-family: var(--font-mono);
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+    .search-bar input::placeholder { color: var(--text-dim); opacity: 0.5; }
+
+    /* Table */
+    .glossary-section {
+      padding: 60px 24px 100px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .glossary-count {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--text-dim);
+      letter-spacing: 2px;
+      margin-bottom: 24px;
+    }
+    .glossary-count span { color: var(--neon); }
+
+    .glossary-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .glossary-table thead tr {
+      background: rgba(124,58,237,0.15);
+      border-bottom: 1px solid var(--purple);
+    }
+    .glossary-table th {
+      padding: 14px 20px;
+      text-align: left;
+      font-family: var(--font-display);
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      font-weight: 700;
+    }
+    .glossary-table th:first-child { color: var(--neon); }
+    .glossary-table th:nth-child(2) { color: var(--blue-l); }
+
+    .glossary-table tbody tr {
+      border-bottom: 1px solid rgba(124,58,237,0.1);
+      transition: background 0.2s;
+    }
+    .glossary-table tbody tr:hover { background: rgba(124,58,237,0.07); }
+    .glossary-table tbody tr.hidden-row { display: none; }
+
+    .glossary-table td {
+      padding: 14px 20px;
+      vertical-align: top;
+      line-height: 1.6;
+    }
+    .td-en {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--neon);
+      white-space: nowrap;
+    }
+    .td-es {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--blue-l);
+      white-space: nowrap;
+    }
+    .td-def {
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+
+    .no-results {
+      display: none;
+      text-align: center;
+      padding: 60px 20px;
+      font-family: var(--font-mono);
+      color: var(--text-dim);
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+    .no-results.visible { display: block; }
+  </style>
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- ── NAV ── -->
+  <nav class="conf-nav">
+    <a href="index.html" class="nav-back">
+      <svg viewBox="0 0 20 20" fill="none"><path d="M15 10H5M9 6l-4 4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Volver al evento</span>
+    </a>
+    <span class="nav-brand">Colombia <em>5.0</em></span>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <header class="glossary-hero">
+    <div class="orb" style="width:400px;height:400px;background:radial-gradient(circle,rgba(124,58,237,0.2) 0%,transparent 70%);top:-15%;left:-10%;"></div>
+    <div class="orb" style="width:350px;height:350px;background:radial-gradient(circle,rgba(30,64,175,0.2) 0%,transparent 70%);bottom:-10%;right:-5%;"></div>
+
+    <div class="reveal-up delay-0">
+      <div class="conf-tag conf-tag-blue" style="display:inline-flex;margin-bottom:20px;">
+        <span>📖</span><span>Vocabulario Técnico</span>
+      </div>
+    </div>
+
+    <h1 class="reveal-up delay-1" style="font-family:var(--font-display);font-size:clamp(48px,9vw,96px);font-weight:900;background:linear-gradient(135deg,#93c5fd 0%,#7c3aed 50%,#39ff14 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:16px;">
+      Glossary
+    </h1>
+    <p class="reveal-up delay-2" style="font-family:var(--font-mono);font-size:14px;color:var(--text-dim);letter-spacing:2px;max-width:480px;margin:0 auto;">
+      30 términos técnicos en inglés aprendidos durante el evento, con su traducción y definición.
+    </p>
+
+    <!-- Search -->
+    <div class="search-bar reveal-up delay-3">
+      <svg viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M15 15l-3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <input type="text" id="searchInput" placeholder="Buscar término..." autocomplete="off" />
+    </div>
+  </header>
+
+  <!-- ── TABLE ── -->
+  <section class="glossary-section">
+    <p class="glossary-count">Mostrando <span id="visibleCount">30</span> de 30 términos</p>
+
+    <table class="glossary-table" id="glossaryTable">
+      <thead>
+        <tr>
+          <th>Inglés</th>
+          <th>Español</th>
+          <th>Definición</th>
+        </tr>
+      </thead>
+      <tbody id="glossaryBody">
+        <tr><td class="td-en">Cloud Computing</td><td class="td-es">Computación en la nube</td><td class="td-def">Servicios y recursos tecnológicos ofrecidos a través de internet sin necesidad de infraestructura local.</td></tr>
+        <tr><td class="td-en">Gamification</td><td class="td-es">Gamificación</td><td class="td-def">Aplicación de mecánicas y elementos de videojuegos en contextos no lúdicos para motivar comportamientos.</td></tr>
+        <tr><td class="td-en">User Interface (UI)</td><td class="td-es">Interfaz de usuario</td><td class="td-def">Conjunto de elementos visuales e interactivos mediante los cuales el usuario interactúa con un sistema.</td></tr>
+        <tr><td class="td-en">User Experience (UX)</td><td class="td-es">Experiencia de usuario</td><td class="td-def">Percepción y respuesta de una persona al usar un producto o sistema digital.</td></tr>
+        <tr><td class="td-en">Artificial Intelligence</td><td class="td-es">Inteligencia artificial</td><td class="td-def">Simulación de procesos de inteligencia humana por parte de sistemas informáticos.</td></tr>
+        <tr><td class="td-en">Machine Learning</td><td class="td-es">Aprendizaje automático</td><td class="td-def">Rama de la IA que permite a las máquinas aprender y mejorar a partir de datos sin ser programadas explícitamente.</td></tr>
+        <tr><td class="td-en">Rendering</td><td class="td-es">Renderizado</td><td class="td-def">Proceso de generar una imagen digital a partir de un modelo 2D o 3D mediante software.</td></tr>
+        <tr><td class="td-en">Digital Sovereignty</td><td class="td-es">Soberanía digital</td><td class="td-def">Capacidad de un individuo, organización o país de controlar sus propios datos e infraestructura digital.</td></tr>
+        <tr><td class="td-en">Pixel</td><td class="td-es">Píxel</td><td class="td-def">Unidad mínima de una imagen digital, representada como un punto de color en una pantalla.</td></tr>
+        <tr><td class="td-en">Frame Rate</td><td class="td-es">Tasa de fotogramas</td><td class="td-def">Número de imágenes por segundo que un sistema puede mostrar, medido en FPS (frames per second).</td></tr>
+        <tr><td class="td-en">Shader</td><td class="td-es">Sombreador</td><td class="td-def">Programa que determina el color y la apariencia final de un píxel o vértice en gráficos 3D.</td></tr>
+        <tr><td class="td-en">API</td><td class="td-es">Interfaz de programación</td><td class="td-def">Conjunto de reglas que permite a diferentes aplicaciones comunicarse e intercambiar datos entre sí.</td></tr>
+        <tr><td class="td-en">Open Source</td><td class="td-es">Código abierto</td><td class="td-def">Software cuyo código fuente es público y puede ser modificado y distribuido libremente.</td></tr>
+        <tr><td class="td-en">Productivity</td><td class="td-es">Productividad</td><td class="td-def">Medida de la eficiencia con que se utilizan recursos para generar resultados en un tiempo determinado.</td></tr>
+        <tr><td class="td-en">Color Grading</td><td class="td-es">Corrección de color</td><td class="td-def">Proceso de ajuste del color, contraste y brillo de una imagen o video para lograr una estética determinada.</td></tr>
+        <tr><td class="td-en">Composition</td><td class="td-es">Composición</td><td class="td-def">Disposición intencional de elementos visuales dentro de un encuadre para guiar la mirada del espectador.</td></tr>
+        <tr><td class="td-en">Game Engine</td><td class="td-es">Motor de videojuego</td><td class="td-def">Software que proporciona las herramientas principales para desarrollar y ejecutar videojuegos.</td></tr>
+        <tr><td class="td-en">Virtual Reality (VR)</td><td class="td-es">Realidad virtual</td><td class="td-def">Tecnología que crea entornos simulados inmersivos en los que el usuario puede interactuar.</td></tr>
+        <tr><td class="td-en">Augmented Reality (AR)</td><td class="td-es">Realidad aumentada</td><td class="td-def">Superposición de elementos digitales sobre el mundo real, vista a través de una pantalla o dispositivo.</td></tr>
+        <tr><td class="td-en">Blockchain</td><td class="td-es">Cadena de bloques</td><td class="td-def">Sistema de registro distribuido e inmutable que almacena transacciones de forma segura y transparente.</td></tr>
+        <tr><td class="td-en">Responsive Design</td><td class="td-es">Diseño responsivo</td><td class="td-def">Enfoque de diseño web que adapta el contenido a diferentes tamaños y dispositivos de pantalla.</td></tr>
+        <tr><td class="td-en">Wireframe</td><td class="td-es">Esquema de interfaz</td><td class="td-def">Boceto estructural de baja fidelidad que representa la disposición de elementos en una pantalla.</td></tr>
+        <tr><td class="td-en">Prototype</td><td class="td-es">Prototipo</td><td class="td-def">Versión preliminar de un producto que permite probar y validar ideas antes del desarrollo final.</td></tr>
+        <tr><td class="td-en">Bandwidth</td><td class="td-es">Ancho de banda</td><td class="td-def">Capacidad máxima de transmisión de datos a través de una conexión de red en un tiempo dado.</td></tr>
+        <tr><td class="td-en">Cybersecurity</td><td class="td-es">Ciberseguridad</td><td class="td-def">Conjunto de prácticas y tecnologías para proteger sistemas, redes y datos de ataques digitales.</td></tr>
+        <tr><td class="td-en">Metaverse</td><td class="td-es">Metaverso</td><td class="td-def">Espacio virtual colectivo e interactivo que combina realidad aumentada, virtual y el internet.</td></tr>
+        <tr><td class="td-en">Sprint</td><td class="td-es">Ciclo de trabajo</td><td class="td-def">Período corto y fijo de trabajo en metodologías ágiles, generalmente de 1 a 4 semanas.</td></tr>
+        <tr><td class="td-en">Texture Mapping</td><td class="td-es">Mapeo de texturas</td><td class="td-def">Técnica que aplica imágenes 2D sobre superficies 3D para darles apariencia de materiales reales.</td></tr>
+        <tr><td class="td-en">Latency</td><td class="td-es">Latencia</td><td class="td-def">Tiempo que tarda un paquete de datos en viajar desde su origen hasta su destino en una red.</td></tr>
+        <tr><td class="td-en">Accessibility</td><td class="td-es">Accesibilidad</td><td class="td-def">Diseño de productos y servicios digitales que pueden ser usados por personas con cualquier tipo de capacidad.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="no-results" id="noResults">No se encontraron términos para "<span id="searchTerm"></span>"</div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">Colombia <em>5.0</em></span>
+        <p>Acceso · Soberanía · Productividad</p>
+      </div>
+      <div class="footer-copy">
+        <span>© 2025 Colombia 5.0 — Todos los derechos reservados</span>
+      </div>
+    </div>
+    <div class="footer-glow"></div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // ── Search ──
+    const searchInput  = document.getElementById('searchInput');
+    const rows         = document.querySelectorAll('#glossaryBody tr');
+    const visibleCount = document.getElementById('visibleCount');
+    const noResults    = document.getElementById('noResults');
+    const searchTerm   = document.getElementById('searchTerm');
+
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.toLowerCase().trim();
+      let count = 0;
+
+      rows.forEach(row => {
+        const text = row.textContent.toLowerCase();
+        if (!q || text.includes(q)) {
+          row.classList.remove('hidden-row');
+          count++;
+        } else {
+          row.classList.add('hidden-row');
+        }
+      });
+
+      visibleCount.textContent = count;
+      searchTerm.textContent = searchInput.value;
+      noResults.classList.toggle('visible', count === 0);
+    });
+  </script>
+</body>
+</html>
